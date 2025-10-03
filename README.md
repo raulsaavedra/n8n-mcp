@@ -29,6 +29,7 @@ npm run start:http   # optional HTTP bridge
 
 ### Claude Code CLI
 - Register the server for documentation tools only:
+
   ```bash
   claude mcp add n8n-mcp \
     -e MCP_MODE=stdio \
@@ -37,6 +38,7 @@ npm run start:http   # optional HTTP bridge
     -- npx n8n-mcp
   ```
 - Add market-aware credentials when you need management tools. Example for Chile (`CL`) and Mexico (`MX`):
+
   ```bash
   claude mcp add n8n-mcp \
     -e MCP_MODE=stdio \
@@ -52,6 +54,7 @@ npm run start:http   # optional HTTP bridge
 
 ### Codex CLI
 - Edit `~/.codex/config.toml` and add:
+
   ```toml
   [mcp_servers.n8n]
   command = "npx"
@@ -59,6 +62,7 @@ npm run start:http   # optional HTTP bridge
   env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true" }
   ```
 - Include market-prefixed credentials when you need workflow management. Example:
+
   ```toml
   [mcp_servers.n8n]
   command = "npx"
@@ -77,6 +81,7 @@ npm run start:http   # optional HTTP bridge
 
 ### Cursor IDE
 - Create `.cursor/mcp.json` in your project:
+
   ```json
   {
     "mcpServers": {
@@ -93,6 +98,7 @@ npm run start:http   # optional HTTP bridge
   }
   ```
 - Add market-prefixed credentials to enable management tools. Example:
+
   ```json
   {
     "mcpServers": {
